@@ -6,7 +6,7 @@
 </div>
 @endif
 
-  <table class="table table-hover" border="1px">
+  <table class="table table-hover">
     <thead>
       <tr>
         <th scope="col">Id</th>
@@ -21,12 +21,12 @@
 
     <tbody>
       <tr class="table-default">
-        <td style="text-align: center;">{{ $buku->id }}</td>
-        <td style="text-align: center;">{{ $buku->judul }}</td>
+        <td>{{ $buku->id }}</td>
+        <td>{{ $buku->judul }}</td>
         <td>{{ $buku->created_at }}</td>
         <td>{{ $buku->updated_at }}</td>
         <td>
-          <a href="{{ url("/view/{$buku->id}") }}" class="btn btn-primary">View</a>
+          <a href="" class="btn btn-primary">View</a>
           <a href="{{ url("/update/{$buku->id}") }}" class="btn btn-warning">Update</a>
           <a href="{{ url("/delete/{$buku->id}") }}" class="btn btn-danger">Delete</a>
         </td>
@@ -35,3 +35,5 @@
     @endif
     </tbody>
   </table>
+
+@include('footer')

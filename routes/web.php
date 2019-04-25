@@ -18,5 +18,5 @@ Route::get('/create', function(){
 Route::post('/insert', 'MainController@add');
 Route::get('/update/{id}', 'MainController@update');
 Route::post('/edit/{id}', 'MainController@edit');
-Route::get('/view/{id}', 'MainController@view');
+
 Route::get('/delete/{id}', 'MainController@delete');
