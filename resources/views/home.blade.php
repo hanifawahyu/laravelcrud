@@ -26,7 +26,7 @@
         <td>{{ $buku->created_at }}</td>
         <td>{{ $buku->updated_at }}</td>
         <td>
-          <a href="" class="btn btn-primary">View</a>
+          <a href="{{ url("/view/{$buku->id}") }}" class="btn btn-primary">View</a>
           <a href="{{ url("/update/{$buku->id}") }}" class="btn btn-warning">Update</a>
           <a href="{{ url("/delete/{$buku->id}") }}" class="btn btn-danger">Delete</a>
         </td>

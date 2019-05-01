@@ -58,12 +58,18 @@ class MainController extends Controller
     	return redirect('/')->with('info', 'Buku Sukses Diupdate!');
     }
 
+    public function view($id)
+    {
+        $buku = Buku::find($id);
+        return view('view', ['buku' => $buku]);
+    }
+
 
     public function delete($id)
     {
-    	Buku::where('id', $id)
-    	->delete();
-    	return redirect('/')->with('info', 'Buku Sukses Dihapus!');
+        Buku::where('id', $id)
+        ->delete();
+        return redirect('/')->with('info', 'Buku Sukses Dihapus!');
     }
 
     
